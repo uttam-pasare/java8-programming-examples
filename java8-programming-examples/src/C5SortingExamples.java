@@ -14,5 +14,13 @@ public class C5SortingExamples {
         Comparator<Course> compairingByRatingDescending = Comparator.comparing(Course::getRating).reversed();
         System.out.println(courses.stream().sorted(compairingByRatingDescending).collect(Collectors.toList()));
 
+        System.out.println("-------------------- Comparing by rating and then compairing by name --------------------------");
+        Comparator<Course> compairingByRatingAndCourseNameAscending = Comparator
+                .comparing(Course::getRating)
+                .thenComparing(Course::getName);
+        System.out.println(courses.stream()
+                .sorted(compairingByRatingAndCourseNameAscending)
+                .collect(Collectors.toList()));
+
     }
 }
