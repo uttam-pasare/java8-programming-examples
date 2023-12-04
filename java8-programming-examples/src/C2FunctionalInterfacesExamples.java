@@ -14,19 +14,19 @@ public class C2FunctionalInterfacesExamples {
         Function<Integer, Integer> squareFunction = number -> number * number;
         Consumer<Integer> printer = System.out::println;
 
-//        numbers.stream()
-//                .filter(isEvenPredicate)
-//                .map(squareFunction)
-//                .forEach(printer);
-//
-//        numbers.stream().sorted(Comparator.comparingInt(n -> n))
-//                .forEach(System.out::println);
+        numbers.stream()
+                .filter(isEvenPredicate)
+                .map(squareFunction)
+                .forEach(printer);
 
-//        printByCriteria(numbers, x -> x%2 == 0);
-//        printByCriteria(numbers, x -> x%2 != 0);
+        numbers.stream().sorted(Comparator.comparingInt(n -> n))
+                .forEach(System.out::println);
 
-//        numbers.stream().map(x -> x*x).forEach(System.out::println);
-        //square(numbers, x-> x*x*x);
+        printByCriteria(numbers, x -> x%2 == 0);
+        printByCriteria(numbers, x -> x%2 != 0);
+
+        numbers.stream().map(x -> x*x).forEach(System.out::println);
+        square(numbers, x-> x*x*x);
 
         Supplier<Integer> numberSupplier = () -> new Random().nextInt();
         System.out.println(numberSupplier.get());
