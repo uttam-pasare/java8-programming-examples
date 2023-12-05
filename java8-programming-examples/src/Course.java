@@ -58,6 +58,7 @@ class Course {
                 new Course("Spring Boot", "Framework", 7, 1000),
                 new Course("Hibernate", "Framework", 6, 3000),
                 new Course("Jenkins", "DevOps", 8, 2000),
-                new Course("Angular", "FullStack", 7, 5000));
+                new Course("Angular", "FullStack", 7, 5000),
+                new Course("Aws", "DevOps", 9, 6000));
     }
 }
