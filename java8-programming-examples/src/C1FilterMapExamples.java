@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class C1FilterMapExamples {
@@ -43,6 +46,14 @@ public class C1FilterMapExamples {
         System.out.println("-------------// sort courses with length of the course //-------------------");
         courses.stream().sorted(Comparator.comparing(String::length))
                 .forEach(System.out::println);
+
+        System.out.println("------- flattens the two lists ---------------");
+        List<List<Integer>> results = new ArrayList<>();
+        List<Integer> courses1 = List.of(1,2,3);
+        List<Integer> courses2 = List.of(4,5,6);
+        results.add(courses1);
+        results.add(courses2);
+        System.out.println(results.stream().flatMap(Collection::stream).collect(Collectors.toList()));
 
     }
 }

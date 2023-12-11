@@ -54,7 +54,7 @@ class Course {
     }
 
     public List<Course> getCourses(){
-        return List.of(new Course("Framework", "Framework", 9, 1000),
+        return List.of(new Course("Spring", "Framework", 9, 1000),
                 new Course("Spring Boot", "Framework", 7, 1000),
                 new Course("Hibernate", "Framework", 6, 3000),
                 new Course("Jenkins", "DevOps", 8, 2000),
